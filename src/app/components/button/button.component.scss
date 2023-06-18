@@ -1,0 +1,25 @@
+@import 'variables.scss';
+
+:host {
+    width: 100%;
+
+    button {
+        background: $button;
+        color: $background;
+        border: none;
+        border-radius: 1rem;
+        width: 100%;
+        height: 4rem;
+        cursor: pointer;
+
+        &:hover {
+            background: rgba($color-secundary, 60%);
+            transition: all 0.3s;
+        }
+
+        &:active {
+            position: relative;
+            top: 1px;
+        }
+    }
+}

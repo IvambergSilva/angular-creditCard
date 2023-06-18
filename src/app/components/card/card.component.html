@@ -1,0 +1,29 @@
+<div class="card-container">
+    <header>
+        <div class="chipCard">
+            <img src="assets/images/chip.png" alt="">
+        </div>
+        <div class="flagCard">
+            <img src="assets/images/visa.png" alt="">
+        </div>
+    </header>
+    <main>
+        <div class="cardNumber">
+            <strong>{{ cardNumber }}</strong>
+        </div>
+    </main>
+    <footer>
+        <div class="cardHolder">
+            <span>Card Holder</span>
+            <strong>{{ cardHolders }}</strong>
+        </div>
+        <div class="cardExpires">
+            <span>Expires {{ cvv }}</span>
+            <span class="cardExpires-date">
+                <strong>{{ month }}</strong>
+                <strong>/</strong>
+                <strong>{{ year }}</strong>
+            </span>
+        </div>
+    </footer>
+</div>

@@ -1,0 +1,77 @@
+.card-container {
+    background: #fc11c1;
+    max-width: 32rem;
+    height: 20rem;
+    border-radius: 1.5rem;
+    padding: 2rem;
+
+    display: grid;
+   
+
+    header {
+        display: flex;
+        justify-content: space-between; 
+        align-items: flex-start;
+
+        img {
+            height: 4rem;
+        }
+    }
+
+    main {
+        align-items: center;
+        
+        .cardNumber {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            strong {
+                font-size: 2rem;
+                text-transform: uppercase;
+                letter-spacing: 0.1rem;
+            }
+        }
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        
+        .cardExpires {
+            width: 8rem;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+
+            span {
+                font-size: 1rem;
+                margin-bottom: 0.7rem;
+                width: 100%;
+                
+                &.cardExpires-date {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    
+                    strong {
+                        display: block;
+                        max-width: 100%;
+                        &:nth-child(2) {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+
+            strong {
+                font-size: 1.4rem;
+                text-transform: uppercase;
+
+            }
+            
+        }
+    }
+}

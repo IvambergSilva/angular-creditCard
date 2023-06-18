@@ -1,0 +1,62 @@
+<form class="form-container">
+    <div class="cardNumber">
+        <label for="cardNumber">Card Number</label>
+        <input
+            type="text" name="cardNumber" id="cardNumber"
+            (input)="filterInputNumber($event, 'cardNumber')"
+            maxlength="16"
+        >
+    </div>
+
+    <div class="cardHolders">
+        <label for="cardNumber">Card Holders</label>
+        <input 
+            type="text" name="cardHolders" id="cardHolders"
+            (input)="getValueCardHolders($any($event.target).value)"
+        >
+    </div>
+
+    <div class="expirationDate">
+        <label>Expiration Date</label>
+
+        <div>
+            <div class="month">
+                <label for="month">Month</label>    
+                <select name="month" id="month"
+                    [(ngModel)]="month"
+                    (ngModelChange)="getValueMonth()"
+                >
+                    <option disabled hidden>Month</option>
+                    <option *ngFor="let i of monthList">{{i}}</option>
+                </select>
+            </div>
+            
+            <div class="year">
+                <label for="year">Year</label>
+                <select name="date" id="year"
+                    [(ngModel)]="year"
+                    (ngModelChange)="getValueYear()"
+                >
+                    <option disabled hidden>Year</option>
+                    <option *ngFor="let i of yearList">{{i}}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="cvv">
+        <label for="cvv">CVV</label>
+
+        <div>
+            <input
+            type="text" name="cvv" id="cvv"
+            (input)="filterInputNumber($event, 'cvv')"
+            maxlength="3"
+            >
+        </div>
+    </div>
+    
+    <div class="button">
+        <app-button text="Submit"></app-button>
+    </div>
+</form>
